@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="60" y2="100"><stop offset="0" stop-color="#ff2a5f"/><stop offset=".5" stop-color="#e94fb4"/><stop offset="1" stop-color="#a85cff"/></linearGradient>
+    <radialGradient id="bgg" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#241238"/><stop offset=".65" stop-color="#110c22"/><stop offset="1" stop-color="#0a0814"/></radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="a"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="c"/>
+      <feMerge><feMergeNode in="c"/><feMergeNode in="b"/><feMergeNode in="a"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="fglow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <path id="S" d="M60,15 Q60,0 45,0 H15 Q0,0 0,15 V35 Q0,50 15,50 H45 Q60,50 60,65 V85 Q60,100 45,100 H15 Q0,100 0,85"/>
+    <path id="three" d="M0,0 H45 Q60,0 60,15 V35 Q60,50 45,50 H20 M45,50 Q60,50 60,65 V85 Q60,100 45,100 H0"/>
+  </defs>
+  <rect width="512" height="512" fill="url(#bgg)"/>
+  <rect x="36" y="36" width="440" height="440" rx="72" fill="none" stroke="#7a3cff" stroke-width="5" opacity=".85" filter="url(#fglow)"/>
+  <g transform="translate(70,121) scale(2.7)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g filter="url(#glow)" stroke-width="8"><use href="#S" stroke="url(#g)"/><use href="#three" x="78" stroke="#1fe0c8"/></g>
+    <g stroke="#fff" stroke-width="2" opacity=".8"><use href="#S"/><use href="#three" x="78"/></g>
+  </g>
+</svg>

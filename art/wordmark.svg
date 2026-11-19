@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480" width="1280" height="480">
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="480" y2="100"><stop offset="0" stop-color="#ff2a5f"/><stop offset=".5" stop-color="#e94fb4"/><stop offset="1" stop-color="#a85cff"/></linearGradient><linearGradient id="g168" href="#g" x1="-168" x2="312"/><linearGradient id="g252" href="#g" x1="-252" x2="228"/><linearGradient id="g336" href="#g" x1="-336" x2="144"/><linearGradient id="g420" href="#g" x1="-420" x2="60"/>
+    <radialGradient id="bgg" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#241238"/><stop offset=".6" stop-color="#110c22"/><stop offset="1" stop-color="#0a0814"/></radialGradient>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#ffffff" opacity=".025"/></pattern>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="a"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="c"/>
+      <feMerge><feMergeNode in="c"/><feMergeNode in="b"/><feMergeNode in="a"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="fglow" x="-10%" y="-20%" width="120%" height="140%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <g id="S"><path d="M60,15 Q60,0 45,0 H15 Q0,0 0,15 V35 Q0,50 15,50 H45 Q60,50 60,65 V85 Q60,100 45,100 H15 Q0,100 0,85"/></g>
+    <g id="three"><path d="M0,0 H45 Q60,0 60,15 V35 Q60,50 45,50 H20 M45,50 Q60,50 60,65 V85 Q60,100 45,100 H0"/></g>
+    <g id="N"><path d="M0,100 V0 L60,100 V0"/></g>
+    <g id="T"><path d="M0,0 H60 M30,0 V100"/></g>
+  </defs>
+  <!-- wordmark -->
+  <g transform="translate(112,130) scale(2.2)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g filter="url(#glow)" stroke-width="6.5">
+      <use href="#S" stroke="url(#g)"/>
+      <use href="#three" x="84" stroke="#1fe0c8"/>
+      <use href="#N" x="168" stroke="url(#g168)"/>
+      <use href="#T" x="252" stroke="url(#g252)"/>
+      <use href="#N" x="336" stroke="url(#g336)"/>
+      <use href="#T" x="420" stroke="url(#g420)"/>
+    </g>
+    <g stroke="#fff" stroke-width="1.6" opacity=".8">
+      <use href="#S"/><use href="#three" x="84"/><use href="#N" x="168"/><use href="#T" x="252"/><use href="#N" x="336"/><use href="#T" x="420"/>
+    </g>
+  </g>
+</svg>
