@@ -7,7 +7,7 @@
 | | |
 |:-:|---|
 | <img src="apps/neon-disk-management.png" width="96" alt=""> | **[Neon Disk Management](https://github.com/S3ntnt47/neon-disk-management)**: a simple partition manager. Shrink, extend, create and delete partitions. |
-| <img src="apps/neon-undelete.png" width="96" alt=""> | **Neon Undelete**: recovers deleted files from NTFS, FAT and exFAT drives. |
+| <img src="apps/neon-undelete.png" width="96" alt=""> | **[Neon Undelete](https://github.com/S3ntnt47/neon-undelete)**: recovers deleted files from NTFS, FAT and exFAT drives. |
 
 ## Brand files
 
