@@ -11,8 +11,8 @@ New-Item -ItemType Directory $tmp | Out-Null
 $html = Join-Path $tmp 'page.html'
 "<!doctype html><html><head><style>html,body{margin:0;background:transparent;overflow:hidden}</style></head><body><img src=`"$svgUri`" style=`"display:block;width:${Width}px;height:${Height}px`"></body></html>" | Set-Content -Encoding utf8 $html
 $out = [IO.Path]::GetFullPath($Png)
-$args = @('--headless', '--disable-gpu', '--hide-scrollbars', '--force-device-scale-factor=1', "--user-data-dir=$tmp\ud",
-          '--default-background-color=00000000', "--window-size=$Width,$Height", "--screenshot=$out", ([Uri]$html).AbsoluteUri)
-$p = Start-Process -FilePath $edge -ArgumentList $args -Wait -PassThru -WindowStyle Hidden
+$edgeArgs = @('--headless', '--disable-gpu', '--hide-scrollbars', '--force-device-scale-factor=1', "`"--user-data-dir=$tmp\ud`"",
+          '--default-background-color=00000000', "--window-size=$Width,$Height", "`"--screenshot=$out`"", ([Uri]$html).AbsoluteUri)
+$p = Start-Process -FilePath $edge -ArgumentList ($edgeArgs -join ' ') -Wait -PassThru -WindowStyle Hidden
 Remove-Item -Recurse -Force $tmp -ErrorAction SilentlyContinue
 if (-not (Test-Path $out)) { throw "render failed: $Svg" }
